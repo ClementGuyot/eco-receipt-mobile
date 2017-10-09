@@ -2,15 +2,23 @@ import { Component, ViewChild } from '@angular/core';
 
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {HomePage} from "../pages/home/home";
+import {QrcodePage} from "../pages/qrcode/qrcode";
+import {BudgetPage} from "../pages/budget/budget";
+import {ConsumptionPage} from "../pages/consumption/consumption";
+import {WarningPage} from "../pages/warning/warning";
+import {SettingsPage} from "../pages/settings/settings";
+import {LoginPage} from "../pages/login/login";
+import {HelloIonicPage} from "../pages/hello-ionic/hello-ionic";
+import {ReceiptService} from "../components/receipt/receipt.service";
 
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html',
+  providers: [ReceiptService]
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
@@ -29,8 +37,13 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Hello Ionic', component: HelloIonicPage },
-      { title: 'My First List', component: ListPage }
+      { title: 'Accueil', component: HomePage,image: 'favicon.ico' },
+      { title: 'Code d\'identification', component: QrcodePage,image: 'favicon.ico'},
+      { title: 'Gestion Budget', component: BudgetPage,image: 'favicon.ico' },
+      { title: 'Gestion Consommation', component: ConsumptionPage ,image: 'favicon.ico' },
+      { title: 'Alertes', component: WarningPage ,image: 'favicon.ico'},
+      { title: 'Paramètres', component: SettingsPage ,image: 'favicon.ico'},
+      { title: 'Deconnexion', component: LoginPage ,image: 'favicon.ico'}
     ];
   }
 
