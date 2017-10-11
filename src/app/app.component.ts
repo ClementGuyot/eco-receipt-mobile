@@ -13,19 +13,18 @@ import {WarningPage} from "../pages/warning/warning";
 import {SettingsPage} from "../pages/settings/settings";
 import {LoginPage} from "../pages/login/login";
 import {HelloIonicPage} from "../pages/hello-ionic/hello-ionic";
-import {ReceiptService} from "../components/receipt/receipt.service";
 
 
 @Component({
   templateUrl: 'app.html',
-  providers: [ReceiptService]
+  providers: []
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
   rootPage = HelloIonicPage;
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, image: string}>;
 
   constructor(
     public platform: Platform,

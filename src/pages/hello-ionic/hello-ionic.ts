@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {ReceiptService} from "../../components/receipt/receipt.service";
 
 @Component({
   selector: 'page-hello-ionic',

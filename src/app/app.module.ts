@@ -16,7 +16,7 @@ import {HomePage} from "../pages/home/home";
 import {QrcodePage} from "../pages/qrcode/qrcode";
 import {SettingsPage} from "../pages/settings/settings";
 import {WarningPage} from "../pages/warning/warning";
-import {ReceiptService} from "../components/receipt/receipt.service";
+import { SomethingProvider } from '../providers/something/something';
 
 @NgModule({
   declarations: [
@@ -53,7 +53,8 @@ import {ReceiptService} from "../components/receipt/receipt.service";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    SomethingProvider
   ]
 })
 export class AppModule {}
