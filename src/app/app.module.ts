@@ -16,7 +16,7 @@ import {HomePage} from "../pages/home/home";
 import {QrcodePage} from "../pages/qrcode/qrcode";
 import {SettingsPage} from "../pages/settings/settings";
 import {WarningPage} from "../pages/warning/warning";
-import { SomethingProvider } from '../providers/something/something';
+import { TestProvider } from '../providers/test/test';
 
 @NgModule({
   declarations: [
@@ -54,7 +54,7 @@ import { SomethingProvider } from '../providers/something/something';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    SomethingProvider
+    TestProvider
   ]
 })
 export class AppModule {}
